@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 此注解的作用就是将请求对应到controller -->
+    <mvc:annotation-driven/>
+
+    <!-- 配置需要扫描的包-->
+    <context:component-scan base-package="vw.dao"/>
+    <context:component-scan base-package="vw.dao.impl"/>
+    <context:component-scan base-package="vw.controller"/>
+
+    <!-- 视图解析器 -->
+    <bean id="ViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!--  这里申明的id必须为multipartResolver  上传 -->
+    <bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
+    <!-- spring拦截请求是过滤这些静态资源映射 -->
+    <mvc:default-servlet-handler/><!-- 这个配置一定要才能过滤文件 -->
+    <mvc:resources mapping="/plugin/**" location="/assets/plugin/"/>
+    <mvc:resources mapping="/bootstrap/**" location="/assets/plugin/bootstrap/"/>
+    <mvc:resources mapping="/fileupload/**" location="/assets/plugin/fileupload/"/>
+    <mvc:resources mapping="/css/**" location="/assets/css/"/>
+    <mvc:resources mapping="/js/**" location="/assets/js/"/>
+
+</beans>

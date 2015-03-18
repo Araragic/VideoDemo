@@ -1,0 +1,6 @@
+默认的tomcat不认中文，必须要在conf/server.xml文件中添加一下内容 --> URIEncoding="UTF-8"
+最终样子： -- > <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443"
+			   URIEncoding="UTF-8"
+			   />

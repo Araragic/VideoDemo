@@ -1,0 +1,233 @@
+/** header*/
+header{
+    background-color: #fff;
+    margin-top: -10px;
+}
+header .container{
+    width: 1000px;
+}
+header .navbar-form{
+    margin-left: 150px;
+    height: 50px;
+    padding:15px 15px;
+    line-height: 20px;
+    outline: 0 none;
+}
+header .navbar-form>.form-group>.form-control{
+    z-index: 1100;
+    width: 212px;
+    height: 40px;
+    background: #ffffff;
+    border: 2px solid #a0a0a0;
+    line-height: 20px;
+    font-size: 14px;
+    color: #555;
+}
+header .navbar-form>.form-group>.form-control button {
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 90px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    outline: 0 none;
+    border: 0 none;
+    background-position: 0 -160px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+header .navbar-form>.form-group>.form-control button em {
+    display: none
+}
+header .navbar-nav {
+    margin-left: 30px;
+    margin-top: 7px;
+    font-family: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif;
+}
+header .navbar-nav>li>a{
+    height: 50px;
+    line-height: 40px;
+    color: #2e2e2e;
+}
+header .navbar-nav>li>a:hover{
+    color: #c40404;
+    background-color: #fff;
+}
+header .navbar-nav>li.nav-upload{
+    position: relative;
+}
+header .navbar-nav>li.nav-upload:hover{
+    border: 0px solid #ddd;
+}
+header .navbar-nav>li.nav-upload:after{
+    content: '';
+    display: inline-block;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #4a4a4a transparent transparent transparent;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    position: absolute;
+    right: 2px;
+    top: 34px;
+}
+
+header .navbar-nav>li.nav-upload ul {
+    display: none;
+    padding: 0;
+    background-color: #fff;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+header .navbar-nav>li.nav-upload:hover ul{
+    display: block;
+}
+header .navbar-nav>li.nav-upload ul li {
+    height: 36px;
+    text-align: left;
+    position: relative;
+    margin-top: -1px;
+    z-index: 0;
+}
+header .form-group{
+    width: 460px;    
+}
+header .form-control{
+    width: 300px;    
+}
+
+/** uploadbutton*/
+.mainCol{
+    padding-top:30px;
+}
+.mainCol .uploadHot{
+    width:588px;
+    height:182px;
+    margin:0 auto;
+}
+.mainCol .uploadIcon{
+    margin:20px auto 0px;
+    width:92px;
+    height:81px;
+    background:url(../img/upload.png);
+    background-position:-49px -80px;}
+.mainCol .uploadBtn{
+    margin:12px auto 0px;
+    width:190px;
+    height:45px;
+    background:url(../img/upload.png);
+    background-position:0px -173px;
+}
+.mainCol #fileupload{
+    width:200px;
+    height: 150px;
+    margin-top: -150px;
+    margin-left: 200px;
+    filter: alpha(opacity:0);
+    opacity: 0;
+    visibility:visible;
+}
+.mainCol #fileupload:hover{
+    cursor:pointer;
+}
+
+
+/** uploadform*/
+.upload {
+    width: 1000px;
+    margin-bottom: 30px;
+    display: none;
+    }
+.row{
+   margin-left: auto;
+   margin-right: auto; 
+}
+.navbar-inverse{
+    margin-bottom: 20px;
+    height: 27px;
+    background-color: #262729;
+}
+.navbar-inverse>span{
+    font-size: 18px;
+    color: #fff;
+    margin-left: 10px;
+}
+.progress {
+    width:700px;
+    height: 35px;
+}
+.show{
+    margin-top: -8px;
+}
+.showtitle{
+    margin-left: 150px;
+}
+.cancel{
+    margin-right: 20px;
+}
+.uploadform{
+    height: 350px;
+    background-color: #ebebeb;
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+}
+
+.pull-left {
+    width: 660px;
+    height:300px;
+    margin-left: 10px;
+}
+.pull-right{
+    border-left: 1px dashed #000;
+    width:280px;
+    height:300px;
+    margin-right: 10px;
+}
+.uploadform .form-group{
+    margin-top: 20px;
+}
+.control-label{
+    width:80px;
+}
+.btn-primary{
+    margin-top: 75px;
+    margin-left: 80px;
+    width: 130px;
+}
+
+/** */
+.arrow{
+    margin-top: 1px;
+    border-top-style: dashed;
+    border-top-color: #CCCCCC;
+}
+
+.item{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 35px;
+    margin-right: 30px;
+    height: 150px;
+    width: 220px;
+}
+.itemTitle{
+    width:200px;
+    padding:10px 14px 10px 14px;
+    border-top: 1px solid #F2F2F2;
+}
+a .title{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

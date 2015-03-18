@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="vw.dao.VideoDao">
+    <resultMap id="video" type="Video">
+        <id column="id" property="id"></id>
+        <result column="t_videotitle" property="videoTitle"/>
+        <result column="t_videosize" property="videoSize"/>
+        <result column="t_videotype" property="videoType"/>
+        <result column="t_videointro" property="videoIntroduction"/>
+        <result column="t_videoclassification" property="videoClassification"/>
+        <result column="t_videolabel" property="videoLabel"/>
+        <result column="t_videocopyright" property="videoCopyright"/>
+        <result column="t_isprivate" property="isPrivate"/>
+    </resultMap>
+
+    <select id="getVideoList" resultMap="video">
+        SELECT * from tb_video;
+    </select>
+
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 在这里给实体类配置别名，在下面的映射的map里面可以直接使用别名 -->
+	<typeAliases>
+		<typeAlias alias="User" type="vw.bean.User"/>
+        <typeAlias alias="Video" type="vw.bean.Video"/>
+	</typeAliases>
+
+	<!-- 映射map -->
+	<mappers>
+		<mapper resource="/mapper/UserMapper.xml"/>
+        <mapper resource="/mapper/VideoMapper.xml"/>
+	</mappers>
+
+</configuration>

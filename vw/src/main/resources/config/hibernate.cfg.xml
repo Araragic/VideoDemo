@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- 配置数据库方言-->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- 输出所有SQL语句到控制台,有一个另外的选择是把org.hibernate.SQL这个log category设为debug -->
+        <property name="show_sql">true</property>
+        <!-- #在log和console中打印出更漂亮的SQL -->
+        <property name="format_sql">true</property>
+        <!-- 如果开启，hibernate将在SQL中生成有助于调式的注解信息 -->
+        <property name="use_sql_comments">false</property>
+        <!-- 配置缓存，当为true的时候需要别的jar包，取值true|false -->
+        <property name="cache.use_query_cache">false</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <!-- 允许Hibernate自动管理session空间-->
+        <property name="current_session_context_class">thread</property>
+
+
+        <!-- 对应bean-->
+        <mapping class="vw.bean.User"/>
+        <mapping class="vw.bean.Video"/>
+    </session-factory>
+</hibernate-configuration>

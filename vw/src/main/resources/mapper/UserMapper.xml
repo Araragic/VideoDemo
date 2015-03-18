@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="vw.dao.UserDao">
+    <resultMap id="user" type="User">
+        <id column="id" property="id"></id>
+        <result column="t_username" property="userName"/>
+        <result column="t_password" property="password"/>
+    </resultMap>
+
+    <select id="login" resultMap="user" parameterType="Map">
+        SELECT * from tb_user where t_username = #{userName} and t_password = #{password};
+    </select>
+
+    <select id="getUserList" resultMap="user">
+        SELECT * from tb_user;
+    </select>
+
+</mapper>
